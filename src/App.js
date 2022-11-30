@@ -2,8 +2,6 @@ import './App.css';
 import divisor from './images/pattern-divider-desktop.svg';
 import divisorTwo from './images/pattern-divider-mobile.svg';
 import diceIcon from './images/icon-dice.svg';
-import { useEffect, useState } from 'react';
-import DataFetching from './DataFetching.js'
 import AdviceGenerator from './DataFetching.js';
 
 function App() {
@@ -15,13 +13,13 @@ function App() {
           <div className = "Advice-content">{AdviceGenerator("advice")}</div>
           <div className = "Advice-separator">
             <picture>
-              <source media="(max-width: 450px)" srcSet={divisorTwo} />
-              <img src={divisor}/>
+              <source media="(max-width: 450px)" alt='separator-pic' srcSet={divisorTwo} />
+              <img alt='separator-pic' src={divisor}/>
             </picture>
           </div>
           <div className = 'Advice-dice-box'>
             <div className = "Advice-dice" onClick={()=>window.location.reload(false)}>
-            <img className = "Dice-icon" src={diceIcon}/>
+            <img alt='dice-icon' className = "Dice-icon" src={diceIcon}/>
             </div>
           </div>
         </div>
