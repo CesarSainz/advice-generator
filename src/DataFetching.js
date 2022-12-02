@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
-function AdviceGenerator (type){
+function AdviceGenerator (){
 
     const[advice,setAdvice] = useState('');
     const[id,setId]= useState('');
+    let arr;
+    
   
     useEffect(() =>{
       axios.get('https://api.adviceslip.com/advice')
@@ -20,15 +21,9 @@ function AdviceGenerator (type){
       }
     )
 
-    if(type === 'id'){
-        return(
-            <span>{id}</span>
-        );
-    }
-    
     return(
-            <span>{advice}</span>
-    );
+      arr = [id,advice]
+    )
     
     
 }

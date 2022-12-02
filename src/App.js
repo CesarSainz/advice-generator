@@ -3,14 +3,16 @@ import divisor from './images/pattern-divider-desktop.svg';
 import divisorTwo from './images/pattern-divider-mobile.svg';
 import diceIcon from './images/icon-dice.svg';
 import AdviceGenerator from './DataFetching.js';
+import SeparatingData from './SeparatingData.js';
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
+      <header className="App-header"> 
         <div className="Advice-box" style={{backgroundColor:'#313A49'}}>
-          <div className = "Advice-title">Advice #{AdviceGenerator("id")}</div>
-          <div className = "Advice-content">{AdviceGenerator("advice")}</div>
+          <div className = "Advice-title">Advice #{SeparatingData("id")}</div>
+          <div className = "Advice-content">{SeparatingData("advice")}</div>
           <div className = "Advice-separator">
             <picture>
               <source media="(max-width: 450px)" alt='separator-pic' srcSet={divisorTwo} />
