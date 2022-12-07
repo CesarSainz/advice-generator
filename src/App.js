@@ -14,8 +14,7 @@ function App() {
   function getUrl(){
     return 'https://api.adviceslip.com/advice/' + getRandomInt(224).toString()
   }
-
-
+  
   const[advice,setAdvice] = useState('');
   const[id,setId]= useState('');
   const[update,setUpdate] = useState(0);
